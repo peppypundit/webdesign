@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome to Skills to Succeed!</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/frontpage.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  
+  <script type="text/javascript" src="js/angular.min.js"></script>
+   <script type="text/javascript" src="js/app.js"></script>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.js"></script>
+  
+</head>
+<body>
+
+<div ng-controller="subjectController as subject">
+	<div ng-repeat= "lesson in subject.lessons">
+		<h1>{{subject.lesson.name}} </h1>
+	</div> <!-- Closes the Repeat-->
+</div> <!-- Closes the Controller-->
+
+
+<div class="container">
+<!--Section 1: Introduces the Logos and Welcome Message. This section is affixed-->
+  <br>
+  <div class="panel panel-default">
+    <div class="row">
+      <div class="col-md-3">
+        <img alt="Accenture" src="Images\accenture.jpg"  class="img-responsive center-block"/>
+      </div>
+      
+      <div class="col-md-6">
+        <h1 class="text-center">Welcome to the Skills to Succeed Blended Learning Programme!</h1>
+        </div>
+        <div class="col-md-3">
+          <img alt="QUEST" src="Images\quest.jpg" class="img-responsive center-block"/ >
+        </div>
+
+    </div>
+  </div>
+<!--This panel provides the initial instructions-->
+  <div class="row">
+      <div class="col-md-12">
+        <div class="well text-center">
+          <h4> To get started, choose the Semester that you're currently in:</h4>
+        </div>
+      </div>
+  </div>
+
+<!--This section introduces the crucial navigation pills between semesters-->
+  <div class="panel panel-default">
+    <ul class="nav nav-pills nav-justified">
+      <li class="active"><a data-toggle="pill" href="#home"><h3>SEMESTER 1 </h3></a></li>
+      <li><a data-toggle="pill" href="#menu1"><h3>SEMESTER 2</h3></a></li>
+    </ul>
+  </div>
+
+    <!--Within the Pill Navigation this section is for Semester 1-->
+
+      <!--This is the Pill Navigation for Semesters-->
+    <div class="tab-content">
+      <!--This pill section is for Semester 1-->
+      <div id="home" class="tab-pane fade in active text-left">
+        <div class="panel panel-info text-center">
+          <div class="panel-heading"><h3>Semester 1</h3></div>
+          <p><h3>Learn the essential skills to interact at the workplace- with your colleagues and with technology! Start with the Introductory Module below.</h3></p>
+          <br>
+          <br>
+          <!--The first column includes buttons for Introductory Module and English-->  
+          <div class="col-md-4 text-center"> <br>
+            <a href="Lessons/Intro/story.html" class="btn btn-warning center-block"><h4>1. Introductory Module</h4></a><br>
+            <a href="#English" class="btn btn-primary center-block" data-toggle="collapse"><h4>2. English</h4></a><br>
+          </div> <!--closes column-->
+          <!--The second columns only includes a QUEST image for English Learning-->
+          <div class="col-md-4 text-center">
+            <img src="Images/english.jpg" class="img-responsive center-block">
+          </div>
+          <!--This section displays IT Literacy and the Sample Paper-->
+          <div class="col-md-4 text-center"> <br>
+              <a href="#info" class="btn btn-warning center-block" data-toggle="collapse"><h4><span class="glyphicons glyphicons-keyboard-wired"></span>3. IT Literacy </h4></a> <br>
+              <a href="Assessments\Sample_Papers\ES Papers_Sem 1.xls" class="btn btn-primary center-block"><h4> 4. Sample Exam Paper</h4></a> <br>
+          </div>
+
+            <!--This section comes after the Subject Buttons and displays results for English and IT Literacy-->
+          <div class="row">
+            <div class= "col-md-12">
+              
+              <!--This includes the second collapse div (for IT)-->
+              <div id="info" class="collapse">
+                <div class="panel panel-default">
+                  <div class="panel-body text-center"> <h3> Open the 'Content' Folder, and enter 'Lessons'. Then select IT_English or IT_Hindi. Double click on the lesson you are interested in. This will start the process of installing some software. Click 'Yes', and 'Next' on every screen. At the end, click on 'Finish'. There will now be an icon on the desktop for your lesson. Double click on it to start your learning. Good luck! </h3></div>
+                                
+                  
+                </div> <!--closes panel for IT content-->               
+              </div> <!--closes IT collapsed text-->
+
+                       
+              <!--This includes the first collapse div (for English)-->
+              <div id="English" class="collapse">
+                <div class="panel panel-default">
+                  <div class="panel-body">This Section includes both required units (left side) and optional units (right side)</div>
+                    <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#mandatory"> Mandatory Lessons</a></li>
+                    <li><a data-toggle="pill" href="#optional">Optional Lessons </a></li>
+                    </ul>
+                </div> <!--closes panel for English content-->
+
+                
+                <!--This subsection is Mandatory Lessons-->
+                <div class="tab-content">
+                  <div id="mandatory" class="tab-pane fade in text-left">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Lesson Name    <span class="glyphicon glyphicon-book"></span></th>
+                          <th>Lesson    <span class="glyphicon glyphicon-film"></span></th>
+                          <th>Assessment    <span class="glyphicon glyphicon-pencil"></span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="info">
+                          <td> 1. Introducing self & others</td>
+                          <td><a href="Lessons\English\Mandatory\1\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\1\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+                        <tr class="info">
+                          <td> 2. Describing someone</td>
+                          <td><a href="Lessons\English\Mandatory\2\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\2\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 3. Asking Simple Questions</td>
+                          <td><a href="Lessons\English\Mandatory\3\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\3\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 4. Talking about Likes & Dislikes</td>
+                          <td><a href="Lessons\English\Mandatory\4\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\4\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 5. Inviting someone</td>
+                          <td><a href="Lessons\English\Mandatory\5\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\5\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 6. Ordering food at restaurant</td>
+                          <td><a href="Lessons\English\Mandatory\6\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\6\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+
+                        <tr class="info">
+                          <td> 7. Planning an outing</td>
+                          <td><a href="Lessons\English\Mandatory\7\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\7\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 8. Narrating a story</td>
+                          <td><a href="Lessons\English\Mandatory\8\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\8\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 9. Giving directions</td>
+                          <td><a href="Lessons\English\Mandatory\9\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\9\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 10.  Describing and event</td>
+                          <td><a href="Lessons\English\Mandatory\10\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\10\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 11.  Finding a place to stay</td>
+                          <td><a href="Lessons\English\Mandatory\11\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\11\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 12.  Opening a bank account</td>
+                          <td><a href="Lessons\English\Mandatory\12\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\12\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 13.  Writing simple application</td>
+                          <td><a href="Lessons\English\Mandatory\13\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\13\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 14.  Making resume</td>
+                          <td><a href="Lessons\English\Mandatory\14\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\14\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                        <tr class="info">
+                          <td> 15.  Writing an email</td>
+                          <td><a href="Lessons\English\Mandatory\15\index.html"><h5>Let's Go to Class! </h5></a></td>
+                          <td><a href="Assessments\English\Mandatory\15\index.html"><h5> Test Time!</h5></a></td> 
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!--This subsection is Optional Lessons-->
+                
+                <div id="optional" class="tab-pane fade in active text-left">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Lesson Name <span class="glyphicon glyphicon-book"></span></th>
+                        <th>Lesson    <span class="glyphicon glyphicon-film"></span></th>
+                        <th>Assessment    <span class="glyphicon glyphicon-pencil"></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="info">
+                        <td> 1. Asking and Telling the Time </td>
+                        <td><a href="Lessons\English\Optional\1\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\1\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+                      <tr class="info">
+                        <td>2. Talking About Favourite Things </td>
+                        <td><a href="Lessons\English\Optional\2\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\2\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td> 3. Describing a known place </td>
+                        <td><a href="Lessons\English\Optional\3\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\3\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td>4. Asking for directions </td>
+                        <td><a href="Lessons\English\Optional\4\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\4\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td> 5. How to ask the price of something </td>
+                        <td><a href="Lessons\English\Optional\5\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\5\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td> 6. How to Talk about the Weather </td>
+                        <td><a href="Lessons\English\Optional\6\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\6\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td> 7. Talk about an Experience </td>
+                        <td><a href="Lessons\English\Optional\7\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\7\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td> 8. Visiting a doctor </td>
+                        <td><a href="Lessons\English\Optional\8\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\8\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td>9. Making travel bookings </td>
+                        <td><a href="Lessons\English\Optional\9\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\9\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+
+                      <tr class="info">
+                        <td>10. Checking into a hotel</td>
+                        <td><a href="Lessons\English\Optional\10\index.html"><h5>Let's Go to Class!</h5></a></td>
+                        <td><a href="Assessments\English\Optional\10\index.html"><h5>Test Time!</h5></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>                      
+              </div> <!--closes English collapsed text-->
+            
+
+            </div> <!--Closes the column-->
+          </div> <!--Closes the final row of the Semester 1 Panel-->
+        
+        </div> <!--This closes the entire Semester 1 Panel-->
+      </div> <!--This closes the div for Semester 1-->
+    
+    <!--This pill section is for Semester 2-->
+      <div id="menu1" class="tab-pane fade in">
+        <div class="row">
+          
+      <!--The first column contains WPR and BYB Modules-->
+          <div class="col-md-4">
+            <div class="panel panel-info">
+              <div class="panel-heading"><h3>Work Readiness</h3></div>
+              <br>
+              <ol>
+                <li><a href="Lessons\WPR\1\1.htm">Workplace Expectations</a></li>
+                <li><a href="Lessons\WPR\5\5.htm">Workplace Protocol</a></li>
+                <li><a href="Lessons\WPR\2\2.htm">My Image</a> </li>                         
+                <li><a href="Lessons\WPR\3\3.htm">Preparing For Interview </a></li>   
+                <li><a href="Lessons\WPR\7\7.htm">Leadership </a>  </li>
+                <li><a href="Lessons\WPR\9\9.htm">Money Management </a></li>
+                <li><a href="Lessons\WPR\13\13.htm">Workers Rights</a></li>
+              </ol> 
+            </div>
+
+            <div class="panel panel-info">
+              <div class="panel-heading"><h3>Entrepreneurship- Microsoft's Build Your Business</h3></div>
+              <br>
+              <ol>
+                <li> <a href="Lessons\BYB\BYB1\story.html"> Shaping My Destiny </a></li>
+                <li> <a href="Lessons\BYB\BYB2\story.html"> Creating My Business </a></li>
+                <li> <a href="Lessons\BYB\BYB3\story.html"> Exploring The Market </a></li>
+                <li> <a href="Lessons\BYB\BYB4\story.html"> Financing My Business</a></li>
+              </ol>
+
+            </div>
+
+          </div>
+          <!--The second colum contains photos-->
+          <div class="col-md-4">
+            <div class="panel panel-info">
+              <div class= "panel-heading"><br><br></div>
+              <img class="img-responsive center-block" src="Images\wpr.jpg"/ >
+            </div>
+
+            <div class="panel panel-info">
+              <div class="panel-heading"><h3>Sample Paper 2</h3></div>
+              <br>
+              <p> <font size="4" color="blue">Do you think you're ready? Click <a href="Assessments\Sample_Papers\ES Papers_Sem 2.xls">here</a> to give it a try!</font></p>
+              <br>
+              <div class="panel-footer"></div>
+
+            </div>
+          </div>
+
+          <!--The third column contains 'Other Skills'-->
+          <div class="col-md-4">
+            <div class="panel panel-info">
+              <div class="panel-heading"><h3>Other Skills</h3></div>
+              <br>
+              <ol>
+                 <li>Occupational Safety, Health & Environment Education</li>
+                  <ul>
+                    <li><a href="PDFs\PROMOTING SAFETY IN THE WORKPLACE.pdf">Promoting Safety in the Workplace</a></li>
+                    <li><a href="PDFs\5S Presentation.pdf">The 5Ss</li></a>
+                    <li><a href="PDFs\Environmental Education.pdf">Environment Education</li></a>
+                   </ul>            
+                 <li>Labour Welfare </li>
+                  <ul>
+                    <li><a href="PDFs\EMPLOYEE PROVIDENT FUND ACT.pdf">Employee Provident Fund Act</li></a>
+                    <li><a href="PDFs\EMPLOYEE STATE INSURANCE ACT.pdf">Employee State Insurance Act</li></a>
+                  </ul>
+                 <li>Quality Tools- Quality</li>
+                  <ul>
+                    <li><a href="PDFs\SEVEN QUALITY TOOLS.pdf">Quality Tools</li></a>
+                    <li><a href="PDFs\QUALITY CIRCLES.pdf">Quality Circles</li></a>
+                    <li><a href="PDFs\BASIC 7 QUALITY TOOLS.pdf"> Basic 7 Quality Tools</li></a>
+                  </ul>
+                 <li>Preparing For A Job
+                  <ul>
+                    <li><a href="PDFs\APPRENTICE ACT 1961.pdf"> Apprentice Act, 1961 </li></a>
+                    <li><a href="PDFs\RESUME & INTERVIEW PREPARATION.pdf"> Resume & Interview Preparation</li></a>
+                    <li><a href="PDFs\INDUSTRY LANDSCAPE.pdf"> Industry Landscape</li></a>
+                  </ul>
+
+                 </li>
+              </ol>
+              <br>       
+            </div>
+          </div>
+      </div>
+  </div> <!--This closes the pill navigation between semester-->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well text-center">
+        <h5><p> Copyright <span class="glyphicon glyphicon-copyright-mark"> </span>2015. QUEST Alliance. All Rights Reserved</p></h5>
+      </div>
+    </div>
+  </div>
+
+</div><!--This closes the overall Bootstrap Container-->
+
+</body>
+</html>
+
